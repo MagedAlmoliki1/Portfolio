@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer components {
+  .brutalist-button {
+    @apply border border-[#030202] transition-all duration-200;
+  }
+  .brutalist-button-primary {
+    @apply bg-[#030202] text-white;
+  }
+  .brutalist-button-primary:hover {
+    box-shadow: 4px 4px 0px 0px #b50a01;
+    transform: translate(-4px, -4px);
+  }
+  .brutalist-button-secondary {
+    @apply bg-white text-[#030202];
+  }
+  .brutalist-button-secondary:hover {
+    box-shadow: 4px 4px 0px 0px #030202;
+    transform: translate(-4px, -4px);
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1930;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  @apply antialiased pt-24;
+}

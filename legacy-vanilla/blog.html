@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog - ALEX / ZENKINS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&amp;family=DM+Sans:wght@400&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#4a463f",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f2eeff",
+                        "primary-fixed": "#ffdad4",
+                        "on-primary-fixed": "#400100",
+                        "surface": "#fcf8ff",
+                        "surface-container-high": "#e9e5ff",
+                        "inverse-primary": "#ffb4a7",
+                        "surface-variant": "#e3dffe",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1930",
+                        "outline": "#916f69",
+                        "outline-variant": "#e5bdb7",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dad7f6",
+                        "secondary-fixed": "#e9e1e0",
+                        "surface-container": "#efebff",
+                        "tertiary": "#45423a",
+                        "surface-container-highest": "#e3dffe",
+                        "on-primary-container": "#ffc2b8",
+                        "on-tertiary-fixed": "#1e1b15",
+                        "primary-fixed-dim": "#ffb4a7",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#5c403b",
+                        "tertiary-fixed": "#e8e2d7",
+                        "surface-bright": "#fcf8ff",
+                        "secondary-fixed-dim": "#ccc5c4",
+                        "background": "#fcf8ff",
+                        "tertiary-container": "#5d5951",
+                        "on-secondary-fixed-variant": "#4a4645",
+                        "primary-container": "#b50a01",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#d6d0c6",
+                        "on-secondary-fixed": "#1e1b1b",
+                        "secondary": "#625d5d",
+                        "secondary-container": "#e6dedd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#bd1306",
+                        "surface-container-low": "#f6f2ff",
+                        "inverse-surface": "#2f2e46",
+                        "on-surface": "#1a1930",
+                        "tertiary-fixed-dim": "#ccc6bb",
+                        "primary": "#890400",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#920500",
+                        "on-secondary-container": "#666161"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-lg": "48px",
+                        "margin-desktop": "120px",
+                        "stack-md": "24px",
+                        "margin-mobile": "24px",
+                        "stack-sm": "8px",
+                        "section-padding": "160px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Epilogue"],
+                        "display-2xl": ["Epilogue"],
+                        "display-lg": ["Epilogue"],
+                        "body-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "display-2xl": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "display-lg": ["72px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-mono": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pt-[104px]">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest text-primary font-label-mono text-label-mono uppercase tracking-widest fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 border-b border-on-surface">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface border-b-4 border-primary">
+            ALEX / ZENKINS
+        </div>
+<div class="hidden md:flex space-x-gutter">
+<a class="text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-200 px-4 py-2 hover:-translate-y-[2px] hover:translate-x-[2px] hover:shadow-[-2px_2px_0px_0px_rgba(0,0,0,1)]" href="#">Home</a>
+<a class="text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-200 px-4 py-2 hover:-translate-y-[2px] hover:translate-x-[2px] hover:shadow-[-2px_2px_0px_0px_rgba(0,0,0,1)]" href="#">Project</a>
+<a class="text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-200 px-4 py-2 hover:-translate-y-[2px] hover:translate-x-[2px] hover:shadow-[-2px_2px_0px_0px_rgba(0,0,0,1)]" href="#">Resume</a>
+<a class="text-primary font-bold border-b-2 border-primary hover:bg-primary hover:text-on-primary transition-all duration-200 px-4 py-2 hover:-translate-y-[2px] hover:translate-x-[2px] hover:shadow-[-2px_2px_0px_0px_rgba(0,0,0,1)]" href="#">Digital Product</a>
+</div>
+<button class="hidden md:block bg-on-background text-on-primary border border-on-background px-6 py-3 font-label-mono uppercase hover:bg-primary transition-colors">
+            Get in Touch
+        </button>
+<!-- Mobile Menu Icon (Simplified for visual, no JS) -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-surface text-3xl">menu</span>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg mb-section-padding">
+<!-- Page Header -->
+<header class="mb-stack-lg">
+<span class="font-label-mono text-label-mono text-primary uppercase block mb-stack-sm">Latest Updates &amp; Insights</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background max-w-4xl">
+                I share my thoughts on software architecture, coding best practices, and the tools I use daily.
+            </h1>
+</header>
+<!-- Featured Article (Split Layout) -->
+<section class="border border-on-surface mb-section-padding group">
+<div class="flex flex-col md:flex-row">
+<!-- Left (55%) -->
+<div class="w-full md:w-[55%] bg-[#030202] text-on-primary p-8 md:p-12 flex flex-col justify-center">
+<span class="font-label-mono text-label-mono text-primary uppercase border border-primary px-3 py-1 self-start mb-stack-md">Architecture</span>
+<h2 class="font-headline-md text-headline-md mb-stack-md">Decoupling Monoliths: A Pragmatic Approach to Microservices Integration</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-stack-lg">
+                        Transitioning from a monolithic architecture doesn't have to mean a complete rewrite. We explore a phased, strangler-fig pattern approach to introducing microservices while maintaining high availability and architectural integrity.
+                    </p>
+<a class="font-label-mono text-label-mono uppercase flex items-center gap-2 hover:text-primary transition-colors self-start pb-1 border-b border-on-primary hover:border-primary" href="#">
+                        Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Right (45%) -->
+<div class="w-full md:w-[45%] h-[300px] md:h-auto border-t md:border-t-0 md:border-l border-on-surface overflow-hidden relative">
+<img alt="Server racks" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A moody, high-contrast photograph of complex server racks in a dark data center, illuminated by stark red and harsh white LED lights. The composition is brutalist and technical, emphasizing the raw architectural structure of modern computing hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC44K9mo89lNis9VvTotSwnA5U_pFI_0ViLwXwTgIWTVBNzqLLdqvM9VnfRIg4dBOOQFfL0-kPmbsiDXBvwuXT7PGxbqlN2PVtZRAiz6F1GVaAggH8i2rr7F5Zmi_wqtvkzSMyLI3K4bBwYgUWxTdu96K0OV6rfNzIqM61tEqZYADIG9PwdQSziWVgQQ0f75z3WoqiqtnP8t5ScfDeVS3nLUU5oYZkdRF5IQeUrWlHP2byYY5uvAj0Y2kN933-z7yKjQiC19xLxmx8"/>
+</div>
+</div>
+</section>
+<!-- Article Grid (3-Column) -->
+<section>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<article class="border border-on-surface hover:bg-surface-container transition-colors group cursor-pointer p-6 flex flex-col h-full">
+<div class="h-[200px] border border-on-surface mb-stack-md overflow-hidden bg-on-background relative">
+<img alt="Mechanical Keyboard" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="A stark, minimalist close-up of a mechanical keyboard with blank black keycaps. Strong directional lighting creates deep, hard shadows across the keys, emphasizing a utilitarian, brutalist aesthetic in a purely black, white, and subtle gray palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_TGWxpHKHXtNiFF2tKgq5ChP2PxqmG0gkU-6cBtiiJ9s4MoxiZAK6-57oQVdD_PqqGEomhzSSAYlB_MOYYvDlMh0c1ITd466MxpD5TNThP_HGT4TfLsRaeKdTmz85mOkkvfaY1BAt10k0z3nyuAXZ2q_uxi7JmOGOU3o9Zdp2GWJ2SYEasZpMCBz5FJXAjjcDeRwvSwTj2XORrtpRWxxuYhve9apFshaOzOsEiA-kRF2d6JynkKoZI93mtWaxejtqsLwdB_LJjcQ"/>
+</div>
+<span class="font-label-mono text-label-mono text-primary uppercase mb-stack-sm block">Tooling</span>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-bold mb-stack-md flex-grow">Optimizing Developer Workflows with Custom CLI Tools</h3>
+<div class="font-label-mono text-label-mono text-on-surface-variant uppercase mt-auto pt-stack-sm border-t border-on-surface">
+                        Oct 12, 2023 • 5 min read
+                    </div>
+</article>
+<!-- Card 2 -->
+<article class="border border-on-surface hover:bg-surface-container transition-colors group cursor-pointer p-6 flex flex-col h-full">
+<div class="h-[200px] border border-on-surface mb-stack-md overflow-hidden bg-on-background relative">
+<img alt="Code reflection" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="An abstract, high-contrast composition showing glowing lines of code on a dark monitor screen reflecting off a sleek, black desk surface. The scene is devoid of organic elements, focusing purely on the sharp, technical geometry and stark white-on-black typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfqoHq_HWay2Kmn252m74JMZ5Qh4Cqu3UL_H-vEdyk40fEmRwXji8NztHMXhLEREmCkMq5iOZ4cDzkDqmdDZ3ScL8w6g-KjLhwOWI8YezlU2D3Gf_hREXbuioEIhPbg8azpAwG86gZ2UNJ7kjaiEFapwRujtJIqj0D8-qK7TIaOb99mvaNppJvy7eeCrMa2hrDFtGDQm7wCbb32rik_XjxOEYZVd_C_0ICx3kcGBIK2ZWVhhcM-ilpM1gPeVXAsh9w4ya8nbJ063A"/>
+</div>
+<span class="font-label-mono text-label-mono text-primary uppercase mb-stack-sm block">Best Practices</span>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-bold mb-stack-md flex-grow">The Case for Immutable Data Structures in Modern UIs</h3>
+<div class="font-label-mono text-label-mono text-on-surface-variant uppercase mt-auto pt-stack-sm border-t border-on-surface">
+                        Sep 28, 2023 • 8 min read
+                    </div>
+</article>
+<!-- Card 3 -->
+<article class="border border-on-surface hover:bg-surface-container transition-colors group cursor-pointer p-6 flex flex-col h-full">
+<div class="h-[200px] border border-on-surface mb-stack-md overflow-hidden bg-on-background relative">
+<img alt="Circuit board" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="A monochromatic, overhead shot of complex circuit board tracing. The intricate geometric patterns are rendered in high-contrast black and white, resembling an abstract architectural blueprint. The lighting is flat and analytical, emphasizing structure over form." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDywmO1PlEjLj3vs0EZYVmEQ3w4HngFnu3p-xoET5WEqn62JBbx74S0MldI18q9gKMtAXpAUD8xMl3ofrxDmC9VQfCnRqNLAMOC5axLDmQg81QuMoi2LsCA2MTyNpQySN_UzIVnhCEXXTu_HtbAiwYh57x9y0xJVZaqJLM0u_zKFCg7acEZkg1tbehUmSjvKLCH0TKRPgl-V1vVw4m_kwFJTqy1fa8XvtR6zSThAhanahx6IBff9r1Jn83RboaFbxKjnKGpdEi5h6s"/>
+</div>
+<span class="font-label-mono text-label-mono text-primary uppercase mb-stack-sm block">System Design</span>
+<h3 class="font-headline-md text-[24px] leading-[32px] font-bold mb-stack-md flex-grow">Caching Strategies for High-Traffic Next.js Applications</h3>
+<div class="font-label-mono text-label-mono text-on-surface-variant uppercase mt-auto pt-stack-sm border-t border-on-surface">
+                        Sep 15, 2023 • 12 min read
+                    </div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest text-primary font-label-mono text-label-mono uppercase w-full py-12 px-12 mt-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md border-t border-on-surface">
+<div class="font-display-lg text-headline-md font-black text-on-surface">
+            ALEX / ZENKINS
+        </div>
+<div class="text-on-secondary-container text-center md:text-left">
+            © 2024 ALEX / ZENKINS. ARCHITECTURAL INTEGRITY GUARANTEED.
+        </div>
+<div class="flex gap-gutter">
+<a class="text-on-secondary-container hover:text-primary transition-colors hover:bg-on-surface hover:text-on-primary px-2 py-1" href="#">X</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors hover:bg-on-surface hover:text-on-primary px-2 py-1" href="#">GitHub</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors hover:bg-on-surface hover:text-on-primary px-2 py-1" href="#">LinkedIn</a>
+</div>
+</footer>
+</body></html>

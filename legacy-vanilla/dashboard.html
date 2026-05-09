@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&amp;family=Epilogue:wght@700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#4a463f",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f2eeff",
+                      "primary-fixed": "#ffdad4",
+                      "on-primary-fixed": "#400100",
+                      "surface": "#fcf8ff",
+                      "surface-container-high": "#e9e5ff",
+                      "inverse-primary": "#ffb4a7",
+                      "surface-variant": "#e3dffe",
+                      "error": "#ba1a1a",
+                      "on-background": "#1a1930",
+                      "outline": "#916f69",
+                      "outline-variant": "#e5bdb7",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#dad7f6",
+                      "secondary-fixed": "#e9e1e0",
+                      "surface-container": "#efebff",
+                      "tertiary": "#45423a",
+                      "surface-container-highest": "#e3dffe",
+                      "on-primary-container": "#ffc2b8",
+                      "on-tertiary-fixed": "#1e1b15",
+                      "primary-fixed-dim": "#ffb4a7",
+                      "on-error": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#5c403b",
+                      "tertiary-fixed": "#e8e2d7",
+                      "surface-bright": "#fcf8ff",
+                      "secondary-fixed-dim": "#ccc5c4",
+                      "background": "#fcf8ff",
+                      "tertiary-container": "#5d5951",
+                      "on-secondary-fixed-variant": "#4a4645",
+                      "primary-container": "#b50a01",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-container": "#d6d0c6",
+                      "on-secondary-fixed": "#1e1b1b",
+                      "secondary": "#625d5d",
+                      "secondary-container": "#e6dedd",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#bd1306",
+                      "surface-container-low": "#f6f2ff",
+                      "inverse-surface": "#2f2e46",
+                      "on-surface": "#1a1930",
+                      "tertiary-fixed-dim": "#ccc6bb",
+                      "primary": "#890400",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed-variant": "#920500",
+                      "on-secondary-container": "#666161"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "stack-lg": "48px",
+                      "margin-desktop": "120px",
+                      "stack-md": "24px",
+                      "margin-mobile": "24px",
+                      "stack-sm": "8px",
+                      "section-padding": "160px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": [
+                              "Epilogue"
+                      ],
+                      "display-2xl": [
+                              "Epilogue"
+                      ],
+                      "display-lg": [
+                              "Epilogue"
+                      ],
+                      "body-lg": [
+                              "DM Sans"
+                      ],
+                      "body-md": [
+                              "DM Sans"
+                      ],
+                      "label-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-md": [
+                              "Epilogue"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "display-2xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "110px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .brutalist-button {
+            border: 1px solid #1a1930;
+            transition: all 0.2s ease;
+        }
+        .brutalist-button:hover {
+            box-shadow: 4px 4px 0px 0px #1a1930;
+            transform: translate(-2px, -2px);
+        }
+        .brutalist-button-primary {
+            background-color: #1a1930;
+            color: #ffffff;
+            border: 1px solid #1a1930;
+        }
+        .brutalist-button-primary:hover {
+            background-color: #b50a01;
+            box-shadow: 4px 4px 0px 0px #1a1930;
+            transform: translate(-2px, -2px);
+        }
+        .brutalist-card {
+            border: 1px solid #1a1930;
+            background-color: #ffffff;
+        }
+        .brutalist-input {
+            border: 1px solid #1a1930;
+            border-radius: 0;
+        }
+        .brutalist-input:focus {
+            outline: none;
+            border-color: #b50a01;
+            border-width: 2px;
+        }
+        .brutalist-table-row {
+            border-bottom: 1px solid #1a1930;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex selection:bg-primary-container selection:text-on-primary-container">
+<!-- Admin Sidebar -->
+<aside class="w-[240px] bg-surface-container-lowest border-r border-on-surface fixed h-full flex flex-col z-40 hidden md:flex">
+<div class="p-gutter border-b border-on-surface h-[88px] flex items-center">
+<span class="font-display-lg-mobile text-headline-md text-on-surface border-b-4 border-primary">ALEX / ZENKINS</span>
+</div>
+<div class="p-gutter flex items-center gap-4 border-b border-on-surface">
+<div class="w-12 h-12 bg-surface-variant border border-on-surface flex items-center justify-center overflow-hidden">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a developer in a modern, well-lit studio. The lighting is crisp and bright, highlighting a sharp, minimal aesthetic. The background is a clean, neutral gray tone that matches a high-end editorial brutalist style. The mood is confident, technical, and precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGBjCdSQ3cmaq8awQJFpSl6srkTYKsvgMUqsHJ_RLPTden-572L4SQi5l6B38YnH0TSX3OK57W0mMWhjhylIUnxcehqtcQIno5pVIFX_B6EIz1_ZVeSxN3A8XBPaKz7EEgIVH8bjlZm7vk0PM-NnV_6exj4LGD4t9PWnAHNPDSImIdbtVXP_4VVISwk2Sdt0M8e1O7C15xFPlpZQrsOstECPEjh4XY64-uH5QqpPWhimGefAowegqUyjaTKt1EyLk0Wskmk08Siuk"/>
+</div>
+<div>
+<div class="font-label-mono text-label-mono uppercase font-bold">Admin User</div>
+<div class="font-label-mono text-[10px] uppercase text-on-surface-variant mt-1">Superadmin</div>
+</div>
+</div>
+<nav class="flex-1 py-stack-md flex flex-col gap-2 px-4">
+<a class="flex items-center gap-3 px-4 py-3 bg-on-surface text-on-primary font-label-mono text-label-mono uppercase transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:bg-surface-variant font-label-mono text-label-mono uppercase transition-colors" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+                Projects
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:bg-surface-variant font-label-mono text-label-mono uppercase transition-colors" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+                Certificates
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:bg-surface-variant font-label-mono text-label-mono uppercase transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+                Resume
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface hover:bg-surface-variant font-label-mono text-label-mono uppercase transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="p-4 border-t border-on-surface">
+<a class="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container font-label-mono text-label-mono uppercase transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-0 md:ml-[240px] bg-surface flex flex-col min-h-screen">
+<!-- Top Header Mobile -->
+<header class="md:hidden bg-surface-container-lowest border-b border-on-surface p-4 flex justify-between items-center sticky top-0 z-30">
+<span class="font-display-lg-mobile text-headline-md text-on-surface border-b-4 border-primary">ALEX / ZENKINS</span>
+<button class="p-2 border border-on-surface brutalist-button bg-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Dashboard Content -->
+<div class="p-gutter md:p-margin-mobile lg:p-stack-lg flex-1">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-stack-lg gap-4">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-background uppercase tracking-tight">Dashboard Overview</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">System status and key metrics</p>
+</div>
+<button class="brutalist-button-primary px-6 py-3 font-label-mono text-label-mono uppercase flex items-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                    Add New Project
+                </button>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-stack-lg">
+<!-- Stat Card 1 -->
+<div class="brutalist-card p-6 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Total Projects</span>
+<span class="material-symbols-outlined text-primary">folder</span>
+</div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-on-surface">24</div>
+<div class="mt-4 flex items-center gap-1 font-label-mono text-[12px] uppercase text-[#166534]">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+                        +3 this month
+                    </div>
+</div>
+<!-- Stat Card 2 -->
+<div class="brutalist-card p-6 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Active Views</span>
+<span class="material-symbols-outlined text-primary">visibility</span>
+</div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-on-surface">1.2K</div>
+<div class="mt-4 flex items-center gap-1 font-label-mono text-[12px] uppercase text-[#166534]">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+                        +12% vs last week
+                    </div>
+</div>
+<!-- Stat Card 3 -->
+<div class="brutalist-card p-6 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Certificates</span>
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+</div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-on-surface">8</div>
+<div class="mt-4 flex items-center gap-1 font-label-mono text-[12px] uppercase text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">horizontal_rule</span>
+                        No change
+                    </div>
+</div>
+<!-- Stat Card 4 -->
+<div class="brutalist-card p-6 flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Inquiries</span>
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div class="font-display-lg-mobile text-display-lg-mobile text-on-surface">15</div>
+<div class="mt-4 flex items-center gap-1 font-label-mono text-[12px] uppercase text-error">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+                        -2 this week
+                    </div>
+</div>
+</div>
+<!-- Projects Management Table Section -->
+<div class="mb-stack-lg">
+<div class="flex justify-between items-center mb-6 border-b border-on-surface pb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase">Recent Projects</h2>
+<a class="font-label-mono text-label-mono uppercase text-primary hover:underline flex items-center gap-1" href="#">
+                        View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-container-lowest border border-on-surface overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[800px]">
+<thead>
+<tr class="border-b-2 border-on-surface bg-surface-variant">
+<th class="p-4 font-label-mono text-label-mono uppercase text-on-surface w-16">Thumbnail</th>
+<th class="p-4 font-label-mono text-label-mono uppercase text-on-surface">Project Name</th>
+<th class="p-4 font-label-mono text-label-mono uppercase text-on-surface">Tech Stack</th>
+<th class="p-4 font-label-mono text-label-mono uppercase text-on-surface">Status</th>
+<th class="p-4 font-label-mono text-label-mono uppercase text-on-surface text-right">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="brutalist-table-row hover:bg-surface transition-colors">
+<td class="p-4">
+<div class="w-12 h-12 bg-tertiary-fixed border border-on-surface">
+<img alt="Project Thumbnail" class="w-full h-full object-cover grayscale opacity-80" data-alt="A minimal abstract data visualization representing a SaaS dashboard. Clean lines, strict geometric shapes, and a stark high-contrast black and white palette with subtle red accents. The style is editorial brutalist, emphasizing raw structure over decoration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIpPcS6Vo6uH4FDsOFxna9vNmoFnFYq1DxrCvJuU-IdMfDXsAxYM1KDmvGbZ0XyooRMpsfcrNAcJefuBxifh3zlwebQv5UmG-kF5yvPIfVeuaGRPwx8F6TbzSYs9_9IaBK9sLG7hxz-xonC9rnhTM3_QF5-KjNYcGSLFpxzzcagC7e1O1XXZdx7NohzVsYSPIGfzJcUR260RxBlbUpkCTaKrvKlJfG2_fPxP-ioL_dB5Yjlqmx12cdW6H9LCVaZ1VGAgAekvE0sAY"/>
+</div>
+</td>
+<td class="p-4">
+<div class="font-label-mono text-label-mono uppercase font-bold text-on-surface">Enterprise Data Platform</div>
+<div class="font-body-md text-[12px] text-on-surface-variant mt-1">B2B Analytics Solution</div>
+</td>
+<td class="p-4">
+<div class="flex gap-2 flex-wrap">
+<span class="px-2 py-1 border border-on-surface text-[10px] font-label-mono uppercase bg-surface">React</span>
+<span class="px-2 py-1 border border-on-surface text-[10px] font-label-mono uppercase bg-surface">Node.js</span>
+</div>
+</td>
+<td class="p-4">
+<span class="px-3 py-1 bg-[#166534] text-white text-[10px] font-label-mono uppercase border border-on-surface">Published</span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 border border-on-surface hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 border border-on-surface hover:bg-error-container text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="brutalist-table-row hover:bg-surface transition-colors">
+<td class="p-4">
+<div class="w-12 h-12 bg-tertiary-fixed border border-on-surface">
+<img alt="Project Thumbnail" class="w-full h-full object-cover grayscale opacity-80" data-alt="A close up of raw electronic hardware, specifically a motherboard or microchip, photographed in a harsh, high-contrast black and white style. The lighting highlights the intricate structural grid of the circuitry. The aesthetic is purely technical and brutalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpRtpJDl_npwtR2b6BuqNK-8XcSwdNAbmuL5FIuVWUArj65eFM-0oibt2pyAaUGQbruXW8hfd5huBKWIVFUaH_rlh9PaWZR0P5ygJijEXRGmvHRFqDL-tnoWIJtqoonZI3QLSxmJce49fLJdmsdr5LoWCdQe09MtZHJCm3TMDThgzjkumpm-gXKdjfS_FwEZMYp2rukhDwGEEtQzcBaCkQj-zlwj51G_O2KCd7_Ay38FVqMqCLXUE71EPiiemJe5Pa3tZO5gVb4Hg"/>
+</div>
+</td>
+<td class="p-4">
+<div class="font-label-mono text-label-mono uppercase font-bold text-on-surface">IoT Control Hub</div>
+<div class="font-body-md text-[12px] text-on-surface-variant mt-1">Hardware Interface App</div>
+</td>
+<td class="p-4">
+<div class="flex gap-2 flex-wrap">
+<span class="px-2 py-1 border border-on-surface text-[10px] font-label-mono uppercase bg-surface">Vue</span>
+<span class="px-2 py-1 border border-on-surface text-[10px] font-label-mono uppercase bg-surface">Python</span>
+</div>
+</td>
+<td class="p-4">
+<span class="px-3 py-1 bg-surface-variant text-on-surface text-[10px] font-label-mono uppercase border border-on-surface">Draft</span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 border border-on-surface hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 border border-on-surface hover:bg-error-container text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface transition-colors">
+<td class="p-4">
+<div class="w-12 h-12 bg-tertiary-fixed border border-on-surface">
+<img alt="Project Thumbnail" class="w-full h-full object-cover grayscale opacity-80" data-alt="A minimal representation of global network connections, showing intersecting straight lines over a flat grid. The image is monochromatic with harsh contrast, fitting an editorial brutalist layout. The feeling is vast, mathematical, and strictly structured." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLSgEQQbfYM4fVEqC-es1BY41q4NWSNp3010uUI8wR2cH0Jd4vfEm3HoNJrH6E4_EaCh4DyhFKjC4GOOisTD-KBjSkjsTXjfT10rrSJPhMoRn9jU_Y7_CKvlemKd_yISV7y6PL1xG4l30TrQ1dGYJAD-WroxCEJLg2qBNw1AYhZ0k5EPR8xtlfv5CKrgCtAQ3t5jZ0vieeut-EXoVfCD6_LC7rm6hdW6Spz653sBjkkuEZXzsLO6LrCaLM-7Gu3d_ERsz-EUHHNSk"/>
+</div>
+</td>
+<td class="p-4">
+<div class="font-label-mono text-label-mono uppercase font-bold text-on-surface">Fintech Dashboard</div>
+<div class="font-body-md text-[12px] text-on-surface-variant mt-1">Trading Analytics</div>
+</td>
+<td class="p-4">
+<div class="flex gap-2 flex-wrap">
+<span class="px-2 py-1 border border-on-surface text-[10px] font-label-mono uppercase bg-surface">Angular</span>
+<span class="px-2 py-1 border border-on-surface text-[10px] font-label-mono uppercase bg-surface">Go</span>
+</div>
+</td>
+<td class="p-4">
+<span class="px-3 py-1 bg-[#166534] text-white text-[10px] font-label-mono uppercase border border-on-surface">Published</span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 border border-on-surface hover:bg-surface-variant transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 border border-on-surface hover:bg-error-container text-error transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase mb-6 border-b border-on-surface pb-4">System Logs</h2>
+<div class="bg-surface-container-lowest border border-on-surface p-6 flex flex-col gap-4">
+<div class="flex items-start gap-4 pb-4 border-b border-surface-variant">
+<div class="p-2 bg-primary-container text-on-primary-container border border-on-surface">
+<span class="material-symbols-outlined text-[20px]">update</span>
+</div>
+<div>
+<div class="font-label-mono text-label-mono uppercase font-bold text-on-surface">Project Updated: Enterprise Data Platform</div>
+<div class="font-body-md text-body-md text-on-surface-variant mt-1">Content revised and new screenshots uploaded by Admin User.</div>
+<div class="font-label-mono text-[10px] uppercase text-on-surface-variant mt-2">2 Hours Ago</div>
+</div>
+</div>
+<div class="flex items-start gap-4 pb-4 border-b border-surface-variant">
+<div class="p-2 bg-surface-variant text-on-surface border border-on-surface">
+<span class="material-symbols-outlined text-[20px]">login</span>
+</div>
+<div>
+<div class="font-label-mono text-label-mono uppercase font-bold text-on-surface">Successful Login</div>
+<div class="font-body-md text-body-md text-on-surface-variant mt-1">Admin User logged in from IP 192.168.1.42.</div>
+<div class="font-label-mono text-[10px] uppercase text-on-surface-variant mt-2">5 Hours Ago</div>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="p-2 bg-error-container text-on-error-container border border-on-surface">
+<span class="material-symbols-outlined text-[20px]">error</span>
+</div>
+<div>
+<div class="font-label-mono text-label-mono uppercase font-bold text-on-surface">API Sync Failure</div>
+<div class="font-body-md text-body-md text-on-surface-variant mt-1">GitHub repository sync failed for project 'IoT Control Hub'.</div>
+<div class="font-label-mono text-[10px] uppercase text-on-surface-variant mt-2">1 Day Ago</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-on-surface w-full py-12 px-12 mt-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md border-t border-on-surface dark:border-outline-variant">
+<div class="font-display-lg text-headline-md font-black text-on-surface dark:text-inverse-on-surface">
+                © 2024 ALEX / ZENKINS. ARCHITECTURAL INTEGRITY GUARANTEED.
+            </div>
+<nav class="flex gap-6">
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">X</a>
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">GitHub</a>
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">LinkedIn</a>
+</nav>
+</footer>
+</main>
+</body></html>

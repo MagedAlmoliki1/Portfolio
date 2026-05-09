@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ALEX / ZENKINS - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Epilogue:wght@700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#4a463f",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f2eeff",
+                        "primary-fixed": "#ffdad4",
+                        "on-primary-fixed": "#400100",
+                        "surface": "#fcf8ff",
+                        "surface-container-high": "#e9e5ff",
+                        "inverse-primary": "#ffb4a7",
+                        "surface-variant": "#e3dffe",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1930",
+                        "outline": "#916f69",
+                        "outline-variant": "#e5bdb7",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dad7f6",
+                        "secondary-fixed": "#e9e1e0",
+                        "surface-container": "#efebff",
+                        "tertiary": "#45423a",
+                        "surface-container-highest": "#e3dffe",
+                        "on-primary-container": "#ffc2b8",
+                        "on-tertiary-fixed": "#1e1b15",
+                        "primary-fixed-dim": "#ffb4a7",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#5c403b",
+                        "tertiary-fixed": "#e8e2d7",
+                        "surface-bright": "#fcf8ff",
+                        "secondary-fixed-dim": "#ccc5c4",
+                        "background": "#fcf8ff",
+                        "tertiary-container": "#5d5951",
+                        "on-secondary-fixed-variant": "#4a4645",
+                        "primary-container": "#b50a01",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#d6d0c6",
+                        "on-secondary-fixed": "#1e1b1b",
+                        "secondary": "#625d5d",
+                        "secondary-container": "#e6dedd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#bd1306",
+                        "surface-container-low": "#f6f2ff",
+                        "inverse-surface": "#2f2e46",
+                        "on-surface": "#1a1930",
+                        "tertiary-fixed-dim": "#ccc6bb",
+                        "primary": "#890400",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#920500",
+                        "on-secondary-container": "#666161"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-lg": "48px",
+                        "margin-desktop": "120px",
+                        "stack-md": "24px",
+                        "margin-mobile": "24px",
+                        "stack-sm": "8px",
+                        "section-padding": "160px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Epilogue"],
+                        "display-2xl": ["Epilogue"],
+                        "display-lg": ["Epilogue"],
+                        "body-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "display-2xl": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "display-lg": ["72px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .brutalist-button {
+            border: 1px solid #030202;
+            transition: all 0.2s ease;
+        }
+        .brutalist-button-primary {
+            background-color: #030202;
+            color: #ffffff;
+        }
+        .brutalist-button-primary:hover {
+            box-shadow: 4px 4px 0px 0px #b50a01;
+            transform: translate(-4px, -4px);
+        }
+        .brutalist-button-secondary {
+            background-color: #ffffff;
+            color: #030202;
+        }
+        .brutalist-button-secondary:hover {
+            box-shadow: 4px 4px 0px 0px #030202;
+            transform: translate(-4px, -4px);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased pt-24">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 bg-surface-container-lowest border-b border-on-surface">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface border-b-4 border-primary">
+            ALEX / ZENKINS
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-primary font-bold border-b-2 border-primary" href="index.html">Home</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-200 px-2 py-1" href="projects.html">Project</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-200 px-2 py-1" href="resume.html">Resume</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface hover:bg-primary hover:text-on-primary transition-all duration-200 px-2 py-1" href="blog.html">Digital Product</a>
+</div>
+<div class="hidden md:block">
+<a href="contact.html" class="brutalist-button brutalist-button-primary px-6 py-3 font-label-mono text-label-mono uppercase inline-block">
+                Get in Touch
+            </a>
+</div>
+</nav>
+<!-- Hero Section -->
+<main>
+<section class="min-h-screen flex flex-col md:flex-row relative overflow-hidden">
+<!-- Left Column: Content -->
+<div class="w-full md:w-[40%] px-12 md:pl-margin-desktop py-stack-lg md:py-section-padding flex flex-col justify-center bg-surface-container-lowest z-10">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-secondary mb-stack-sm">
+                    Full-Stack Developer
+                </span>
+<h1 class="font-display-2xl text-display-2xl text-on-surface mb-stack-md leading-none">
+<span class="block">Alex</span>
+<span class="block relative inline-block">
+                        Zenkins
+                        <div class="absolute bottom-4 left-0 w-full h-2 bg-primary"></div>
+</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-md mb-stack-lg">
+                    I am a full-stack software developer who builds reliable and fast web applications. My focus is on writing clean code that is easy to maintain and scales with your business.
+                </p>
+<div class="border-t border-on-surface pt-stack-md">
+<div class="grid grid-cols-4 gap-4 max-w-sm">
+<!-- Simulated Icons -->
+<div class="w-8 h-8 bg-surface-variant flex items-center justify-center border border-on-surface"><span class="material-symbols-outlined text-on-surface">cloud</span></div>
+<div class="w-8 h-8 bg-surface-variant flex items-center justify-center border border-on-surface"><span class="material-symbols-outlined text-on-surface">code</span></div>
+<div class="w-8 h-8 bg-surface-variant flex items-center justify-center border border-on-surface"><span class="material-symbols-outlined text-on-surface">terminal</span></div>
+<div class="w-8 h-8 bg-surface-variant flex items-center justify-center border border-on-surface"><span class="material-symbols-outlined text-on-surface">design_services</span></div>
+<div class="w-8 h-8 bg-surface-variant flex items-center justify-center border border-on-surface"><span class="material-symbols-outlined text-on-surface">web</span></div>
+<div class="w-8 h-8 bg-surface-variant flex items-center justify-center border border-on-surface"><span class="material-symbols-outlined text-on-surface">javascript</span></div>
+<div class="w-8 h-8 bg-surface-variant flex items-center justify-center border border-on-surface"><span class="material-symbols-outlined text-on-surface">integration_instructions</span></div>
+<div class="w-8 h-8 bg-surface-variant flex items-center justify-center border border-on-surface"><span class="material-symbols-outlined text-on-surface">api</span></div>
+</div>
+</div>
+</div>
+<!-- Right Column: Image -->
+<div class="w-full md:w-[60%] h-[614px] md:h-auto bg-primary relative md:-ml-12 overflow-hidden">
+<img alt="Portrait of developer" class="w-full h-full object-cover object-center mix-blend-luminosity opacity-90 scale-105" data-alt="A striking black and white portrait photography of a confident male developer, cropped from the waist up. He is centered in the frame against a solid, vibrant red-orange background that strongly contrasts with his monochrome figure. The lighting is sharp and dramatic, emphasizing architectural brutalist style. The overall mood is intense, professional, and unapologetically bold, fitting a high-end minimalist digital aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDizRkDYpG1Q2erFf7wAkCRAHDOFiYgClKeb0rQcscPOOb28Jqkc8rIjrZCaiGiqp7g9FhB7hMzS-b892cwP_41mEEDkZsbwjsp-R0wPKZF7bXWY36x5sfSDtWocJJRg-TaHXMeP4l8PU_txDlB66WCQnDAscmSkQctWTJ9dyG8-VTv49h-2dp2M0yVutKJcbt_C7uqCfq3EPEEie9yQHySLOrX7JlJt5102buexUmDy-r_SR5Yo9apxTIXCJgj5tTMX5K6GShMRTc"/>
+</div>
+</section>
+<!-- Dark Section -->
+<section class="bg-on-surface text-on-secondary py-section-padding px-12 md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-stack-lg">
+<div class="md:col-span-4">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary">
+                        Technical Focus
+                    </span>
+</div>
+<div class="md:col-span-8">
+<p class="font-body-lg text-body-lg text-on-secondary">
+                        I specialize in building end-to-end web applications, focusing on performance, security, and solid architecture.
+                    </p>
+</div>
+</div>
+<!-- Accordion List -->
+<div class="border-t border-on-secondary border-opacity-20">
+<div class="border-b border-on-secondary border-opacity-20 py-stack-md flex justify-between items-center group cursor-pointer hover:bg-surface-variant hover:text-on-surface transition-colors">
+<h3 class="font-display-lg text-headline-md font-bold px-4">Frontend Development</h3>
+<span class="material-symbols-outlined px-4">add</span>
+</div>
+<!-- Expanded Item -->
+<div class="border-b border-on-secondary border-opacity-20 py-stack-md bg-surface-variant text-on-surface">
+<div class="flex justify-between items-center px-4 mb-stack-md cursor-pointer">
+<h3 class="font-display-lg text-headline-md font-bold">Backend Architecture</h3>
+<span class="material-symbols-outlined">remove</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-4 pb-4">
+<div class="aspect-video bg-on-surface relative overflow-hidden border border-on-surface">
+<img class="w-full h-full object-cover mix-blend-luminosity opacity-70" data-alt="A stark, monochrome photograph of complex server racks in a data center. The lighting is harsh and dramatic, creating deep black shadows and bright white highlights. The composition focuses on the architectural geometry of the repeating vertical lines, fitting perfectly within an editorial brutalist layout. The mood is highly technical, secure, and robust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKTY5EVzbVTX6u36UjA3M_G8qNErXXFnmkwX18QIRs4egyBs77A7Kg0oQznjM3JfIWnXtfGTqmOqpfWTXQpaSmHYS8t-1UEmpZCvPqfyA7K6U8OjJ9hvOv_Q7yB66u54kEGhwV2zUOzk6zi81ySf9huAcKWrejsGhHZCO5kzPBSeV-EnVwf36SG1LT4hbZ_52ENTxO9j2TBWPOJmM0_6zG1hBXliJsmjuSYgdC8YGvHtlTm03Oc1aOEWC0_8s8HYGYPDSse2bkc00"/>
+</div>
+<div class="flex flex-col justify-center">
+<p class="font-body-md text-body-md text-on-surface mb-stack-md">
+                                Designing robust, scalable backend systems using modern frameworks. Emphasizing clean API design, database optimization, and secure data handling to ensure absolute reliability.
+                            </p>
+<a class="font-label-mono text-label-mono uppercase underline hover:text-primary transition-colors inline-block w-max" href="#">View Case Studies</a>
+</div>
+</div>
+</div>
+<div class="border-b border-on-secondary border-opacity-20 py-stack-md flex justify-between items-center group cursor-pointer hover:bg-surface-variant hover:text-on-surface transition-colors">
+<h3 class="font-display-lg text-headline-md font-bold px-4">Cloud Infrastructure</h3>
+<span class="material-symbols-outlined px-4">add</span>
+</div>
+<div class="border-b border-on-secondary border-opacity-20 py-stack-md flex justify-between items-center group cursor-pointer hover:bg-surface-variant hover:text-on-surface transition-colors">
+<h3 class="font-display-lg text-headline-md font-bold px-4">Framer</h3>
+<span class="material-symbols-outlined px-4">add</span>
+</div>
+<div class="border-b border-on-secondary border-opacity-20 py-stack-md flex justify-between items-center group cursor-pointer hover:bg-surface-variant hover:text-on-surface transition-colors">
+<h3 class="font-display-lg text-headline-md font-bold px-4">Webflow</h3>
+<span class="material-symbols-outlined px-4">add</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-12 mt-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md bg-surface-container-lowest border-t border-on-surface">
+<div class="font-display-lg text-headline-md font-black text-on-surface">
+            ALEX / ZENKINS
+        </div>
+<p class="font-label-mono text-label-mono uppercase text-on-surface text-center md:text-left">
+            © 2024 ALEX / ZENKINS. ARCHITECTURAL INTEGRITY GUARANTEED.
+        </p>
+<div class="flex gap-6">
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container hover:text-primary transition-colors hover:bg-on-surface px-2 py-1" href="#">X</a>
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container hover:text-primary transition-colors hover:bg-on-surface px-2 py-1" href="#">GitHub</a>
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container hover:text-primary transition-colors hover:bg-on-surface px-2 py-1" href="#">LinkedIn</a>
+</div>
+</footer>
+</body></html>

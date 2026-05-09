@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ALEX / ZENKINS - Projects</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800&amp;family=DM+Sans:wght@400&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#4a463f",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f2eeff",
+                        "primary-fixed": "#ffdad4",
+                        "on-primary-fixed": "#400100",
+                        "surface": "#fcf8ff",
+                        "surface-container-high": "#e9e5ff",
+                        "inverse-primary": "#ffb4a7",
+                        "surface-variant": "#e3dffe",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1930",
+                        "outline": "#916f69",
+                        "outline-variant": "#e5bdb7",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dad7f6",
+                        "secondary-fixed": "#e9e1e0",
+                        "surface-container": "#efebff",
+                        "tertiary": "#45423a",
+                        "surface-container-highest": "#e3dffe",
+                        "on-primary-container": "#ffc2b8",
+                        "on-tertiary-fixed": "#1e1b15",
+                        "primary-fixed-dim": "#ffb4a7",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#5c403b",
+                        "tertiary-fixed": "#e8e2d7",
+                        "surface-bright": "#fcf8ff",
+                        "secondary-fixed-dim": "#ccc5c4",
+                        "background": "#fcf8ff",
+                        "tertiary-container": "#5d5951",
+                        "on-secondary-fixed-variant": "#4a4645",
+                        "primary-container": "#b50a01",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#d6d0c6",
+                        "on-secondary-fixed": "#1e1b1b",
+                        "secondary": "#625d5d",
+                        "secondary-container": "#e6dedd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#bd1306",
+                        "surface-container-low": "#f6f2ff",
+                        "inverse-surface": "#2f2e46",
+                        "on-surface": "#1a1930",
+                        "tertiary-fixed-dim": "#ccc6bb",
+                        "primary": "#890400",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#920500",
+                        "on-secondary-container": "#666161"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-lg": "48px",
+                        "margin-desktop": "120px",
+                        "stack-md": "24px",
+                        "margin-mobile": "24px",
+                        "stack-sm": "8px",
+                        "section-padding": "160px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Epilogue"],
+                        "display-2xl": ["Epilogue"],
+                        "display-lg": ["Epilogue"],
+                        "body-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "display-2xl": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "display-lg": ["72px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-mono": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom offset shadow utility for the brutalist theme */
+        .hover-brutalist-offset:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0px 0px rgba(26, 25, 48, 1);
+        }
+        .brutalist-offset {
+            box-shadow: 4px 4px 0px 0px rgba(26, 25, 48, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md min-h-screen flex flex-col pt-24">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-on-surface fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 py-6 border-b border-on-surface dark:border-outline-variant transition-all duration-200">
+<div class="font-display-lg text-headline-md font-extrabold text-on-surface dark:text-inverse-on-surface border-b-4 border-primary">
+            ALEX / ZENKINS
+        </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface dark:text-surface-variant hover:bg-primary hover:text-on-primary dark:hover:bg-primary-container transition-all duration-200 py-2 px-4 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[2px_2px_0px_0px_rgba(26,25,48,1)]" href="index.html">Home</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-primary dark:text-primary-fixed font-bold border-b-2 border-primary hover:bg-primary hover:text-on-primary dark:hover:bg-primary-container transition-all duration-200 py-2 px-4 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[2px_2px_0px_0px_rgba(26,25,48,1)]" href="projects.html">Project</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface dark:text-surface-variant hover:bg-primary hover:text-on-primary dark:hover:bg-primary-container transition-all duration-200 py-2 px-4 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[2px_2px_0px_0px_rgba(26,25,48,1)]" href="resume.html">Resume</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface dark:text-surface-variant hover:bg-primary hover:text-on-primary dark:hover:bg-primary-container transition-all duration-200 py-2 px-4 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[2px_2px_0px_0px_rgba(26,25,48,1)]" href="blog.html">Digital Product</a>
+</nav>
+<a class="hidden md:inline-flex border border-on-surface px-6 py-3 font-label-mono text-label-mono uppercase font-bold hover:bg-on-surface hover:text-surface-container-lowest transition-colors items-center gap-2" href="contact.html">
+            Get in Touch
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<!-- Mobile Menu Button -->
+<button class="md:hidden p-2 text-on-surface">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg md:py-section-padding gap-stack-lg">
+<!-- Page Header -->
+<section class="w-full max-w-4xl self-start flex flex-col gap-stack-sm mb-stack-lg">
+<span class="font-label-mono text-label-mono uppercase text-primary tracking-widest block mb-4 border-l-2 border-primary pl-4">Projects I have done</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-on-surface mb-6">A selection of applications I have built to solve specific business challenges.</h1>
+</section>
+<!-- Filter Bar -->
+<section class="w-full border-b border-on-surface pb-6 mb-stack-lg overflow-x-auto no-scrollbar">
+<div class="flex gap-4 min-w-max">
+<button class="px-6 py-2 border border-on-surface bg-on-surface text-surface-container-lowest font-label-mono text-label-mono uppercase rounded-full hover:bg-primary hover:border-primary transition-colors">All</button>
+<button class="px-6 py-2 border border-on-surface bg-transparent text-on-surface font-label-mono text-label-mono uppercase rounded-full hover:bg-surface-dim transition-colors">Web Apps</button>
+<button class="px-6 py-2 border border-on-surface bg-transparent text-on-surface font-label-mono text-label-mono uppercase rounded-full hover:bg-surface-dim transition-colors">Mobile</button>
+<button class="px-6 py-2 border border-on-surface bg-transparent text-on-surface font-label-mono text-label-mono uppercase rounded-full hover:bg-surface-dim transition-colors">SaaS</button>
+<button class="px-6 py-2 border border-on-surface bg-transparent text-on-surface font-label-mono text-label-mono uppercase rounded-full hover:bg-surface-dim transition-colors">E-commerce</button>
+<button class="px-6 py-2 border border-on-surface bg-transparent text-on-surface font-label-mono text-label-mono uppercase rounded-full hover:bg-surface-dim transition-colors">API</button>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="w-full grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Featured Project (Spans 3 columns) -->
+<article class="md:col-span-3 border border-on-surface bg-[#0A0A0A] text-surface-container-lowest flex flex-col md:flex-row group hover-brutalist-offset transition-all duration-200">
+<div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center border-b md:border-b-0 md:border-r border-on-surface/20 relative">
+<div class="absolute left-0 top-0 bottom-0 w-[4px] bg-primary"></div>
+<div class="flex gap-2 mb-6 flex-wrap">
+<span class="px-3 py-1 border border-primary/50 text-primary font-label-mono text-label-mono uppercase text-xs">SaaS</span>
+<span class="px-3 py-1 border border-primary/50 text-primary font-label-mono text-label-mono uppercase text-xs">React</span>
+<span class="px-3 py-1 border border-primary/50 text-primary font-label-mono text-label-mono uppercase text-xs">Node.js</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-4 text-white">Nexus Enterprise Management Suite</h2>
+<p class="font-body-lg text-body-lg text-surface-variant/80 mb-8 max-w-xl">A comprehensive resource planning application designed for large-scale logistics companies to track inventory, manage fleets, and optimize delivery routes in real-time.</p>
+<div class="flex gap-6 mt-auto">
+<a class="font-label-mono text-label-mono uppercase tracking-widest flex items-center gap-2 hover:text-primary transition-colors border-b border-transparent hover:border-primary pb-1" href="#">
+                            Live Demo <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+<a class="font-label-mono text-label-mono uppercase tracking-widest flex items-center gap-2 text-surface-variant hover:text-surface-container-lowest transition-colors" href="#">
+                            Case Study <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 h-[400px] md:h-auto relative overflow-hidden bg-surface-variant/10">
+<img alt="Nexus Dashboard Mockup" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 mix-blend-luminosity" data-alt="A striking minimalist digital interface displayed on an angled high-resolution monitor. The screen shows complex data visualizations with sharp, rectangular graphs and stark typography in a stark dark mode aesthetic. The environment is dimly lit with subtle overhead lighting highlighting the clean lines of the technology. Deep blacks, crisp whites, and vibrant red accent lines dominate the composition, conveying precision and brutalist functionality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeR4suv56YtofrvLAyYR8P8Xlcd-hI-mogRKmyDOvN5Wls2bLTxKSSV9BwbAke_EFbyHnwpQ4AnnWrPLkqIQz0vqliIrvSkYdFC3fCF5zOQamefbejTGvVQ1FtjCULidNz-WUH7ba9PO2u-MxIqSxKWCe4Br9LqrwL96mH2LSm06b12K0wHPhr7Ftw-Gk7lGC9x-y2_rDgUjSg6D58JACpTXhLh3sRYRhXU6XkclrOUvslzGfTUR5BgCLAcyEcoBFGdZA7voTg9sM"/>
+</div>
+</article>
+<!-- Standard Project Card 1 -->
+<article class="border border-on-surface bg-surface flex flex-col group hover-brutalist-offset transition-all duration-200">
+<div class="h-[220px] w-full border-b border-on-surface relative overflow-hidden bg-surface-dim">
+<img alt="Fintech App Mockup" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A clean, flat-lay photograph of a mobile phone displaying a wireframe-style application interface. The screen exhibits severe minimalist design with sharp grid lines, heavy sans-serif typography, and stark monochrome contrast. The device rests on a pure white, textured concrete surface. The lighting is harsh and directional, casting hard geometric shadows that emphasize the brutalist architectural approach to digital design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHVXZZ4x4DzywPTTUwdyoHekXecOdbUZIsBkadBWia5JCV172XfDk21N-hWsd_SDGi7q0JVlSe4n3sp-wuTroktLLAx5H7g_waj96OeQBkzIv5oUuKIAxrs6LlwhiNT_8rgfoNtHZrIctkF2TMiDEPscKDSLr-YrrnzN7H2kaKj5ae_n0RnkdWohK9QKJAN3zhz4JruDKOvDRjqZMRIcyahT6II6KTomTkEjiDhcZn4CeBuZTR0U8pRv_ODovl0YHuak0fskz-KUQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg font-bold mb-3 line-clamp-1">Aura Fintech App</h3>
+<div class="flex gap-2 mb-4 flex-wrap">
+<span class="px-2 py-1 bg-surface-dim text-primary font-label-mono text-[10px] uppercase border border-on-surface/10">Mobile</span>
+<span class="px-2 py-1 bg-surface-dim text-primary font-label-mono text-[10px] uppercase border border-on-surface/10">Swift</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">A streamlined personal finance tracker that eliminates visual noise, focusing entirely on transactional clarity and forecasting.</p>
+<div class="flex gap-4 mt-auto pt-4 border-t border-on-surface/10">
+<a class="font-label-mono text-xs uppercase tracking-wider font-bold hover:text-primary transition-colors" href="#">Live Demo</a>
+<a class="font-label-mono text-xs uppercase tracking-wider text-secondary hover:text-on-surface transition-colors" href="#">Case Study</a>
+</div>
+</div>
+</article>
+<!-- Standard Project Card 2 -->
+<article class="border border-on-surface bg-surface flex flex-col group hover-brutalist-offset transition-all duration-200">
+<div class="h-[220px] w-full border-b border-on-surface relative overflow-hidden bg-surface-dim">
+<img alt="Code Editor Mockup" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A tight, high-contrast close-up of green and white code lines glowing aggressively on a deep black monitor screen. The text editor interface is raw and unstyled, embodying a stark, technical brutalist aesthetic. The lighting is entirely diegetic, emitted from the screen itself, creating a moody, intense environment. Sharp angles and raw structural elements of the coding environment are prominently featured." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf2zHB5L6JGN0OR1CNkHtRwxm0Xvq8TmRLWJvVj_38ZuHBOnF-da1oMgQOfqhnMbFm6VFYPv5IWAfEpDxQBxBv67ch2ujtDNBYHjegiVbSBJD-mI3qdanpJmP1hxz9mvN2lVmR3HU8TCSuCqUZwYYpn_Om2hruzHUKEtyt8FX7H1o_gHgB5Lp6CcfTB_ZKkVebEsGc1rMp5V0xaE2Wtn_TZBa0U03HvhCcTowdmRbFzJu6wTGQoIHYiJA1AUYzOB4vyalfr93Vx70"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg font-bold mb-3 line-clamp-1">Struct.io API Platform</h3>
+<div class="flex gap-2 mb-4 flex-wrap">
+<span class="px-2 py-1 bg-surface-dim text-primary font-label-mono text-[10px] uppercase border border-on-surface/10">API</span>
+<span class="px-2 py-1 bg-surface-dim text-primary font-label-mono text-[10px] uppercase border border-on-surface/10">Go</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">A high-performance microservices architecture providing robust data validation and routing for decentralized applications.</p>
+<div class="flex gap-4 mt-auto pt-4 border-t border-on-surface/10">
+<a class="font-label-mono text-xs uppercase tracking-wider font-bold hover:text-primary transition-colors" href="#">Live Demo</a>
+<a class="font-label-mono text-xs uppercase tracking-wider text-secondary hover:text-on-surface transition-colors" href="#">Case Study</a>
+</div>
+</div>
+</article>
+<!-- Standard Project Card 3 -->
+<article class="border border-on-surface bg-surface flex flex-col group hover-brutalist-offset transition-all duration-200">
+<div class="h-[220px] w-full border-b border-on-surface relative overflow-hidden bg-surface-dim">
+<img alt="E-commerce Storeform Mockup" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A wide architectural shot of a sleek, modern e-commerce website displayed across three stark, bezel-less monitors aligned perfectly on a matte black desk. The interface shown uses heavy, solid blocks of black, white, and primary red, rejecting any soft gradients or shadows. The overall composition is rigidly mathematical, emphasizing grid-based layouts and aggressive typography in a highly sterile, well-lit studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVGWJ6jxJzE2Sk194QXygC_9sIY-Ioxq-Hj7ZibL7eqgXj0o7j3m-oisJ1fN1Rc7PG20w1a_dJsoypZARccurbNRyfmD5UtjFZ5DTgh3iE6RFSkUmF05QroBttNjMT-YOzngIBqlDG0u9cHgWGovrea5f3wdAYkHpy9FaYRt-gsQchjd-wDxcHgeBdHf4tczrwmPbHb0_4tzMWJCOESEz-lLlsu8bOcd7AnQKGlX-1vwv2MyZDXGK-9l7revgRunKiQOP7iPbvTo0"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-body-lg font-bold mb-3 line-clamp-1">Monolith Storefront</h3>
+<div class="flex gap-2 mb-4 flex-wrap">
+<span class="px-2 py-1 bg-surface-dim text-primary font-label-mono text-[10px] uppercase border border-on-surface/10">E-commerce</span>
+<span class="px-2 py-1 bg-surface-dim text-primary font-label-mono text-[10px] uppercase border border-on-surface/10">Next.js</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-3">A headless e-commerce solution built for high-volume retailers, focusing on sub-second load times and brutalist design aesthetics.</p>
+<div class="flex gap-4 mt-auto pt-4 border-t border-on-surface/10">
+<a class="font-label-mono text-xs uppercase tracking-wider font-bold hover:text-primary transition-colors" href="#">Live Demo</a>
+<a class="font-label-mono text-xs uppercase tracking-wider text-secondary hover:text-on-surface transition-colors" href="#">Case Study</a>
+</div>
+</div>
+</article>
+</section>
+<!-- Pagination -->
+<section class="w-full flex justify-center items-center gap-4 mt-stack-lg pt-8 border-t border-on-surface/20">
+<button aria-label="Previous page" class="w-12 h-12 rounded-full border-2 border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">west</span>
+</button>
+<div class="font-label-mono text-label-mono font-bold tracking-widest px-4">
+                01 / 04
+            </div>
+<button aria-label="Next page" class="w-12 h-12 rounded-full border-2 border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">east</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-on-surface w-full py-12 px-12 mt-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md border-t border-on-surface dark:border-outline-variant">
+<div class="font-display-lg text-headline-md font-black text-on-surface dark:text-inverse-on-surface">
+            ALEX / ZENKINS
+        </div>
+<div class="font-label-mono text-label-mono uppercase text-on-surface dark:text-surface-variant text-center md:text-left order-3 md:order-2">
+            © 2024 ALEX / ZENKINS. ARCHITECTURAL INTEGRITY GUARANTEED.
+        </div>
+<nav class="flex gap-6 order-2 md:order-3">
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:bg-on-surface hover:text-surface-container-lowest px-2 py-1" href="#">X</a>
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:bg-on-surface hover:text-surface-container-lowest px-2 py-1" href="#">GitHub</a>
+<a class="font-label-mono text-label-mono uppercase text-on-secondary-container dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors hover:bg-on-surface hover:text-surface-container-lowest px-2 py-1" href="#">LinkedIn</a>
+</nav>
+</footer>
+</body></html>
