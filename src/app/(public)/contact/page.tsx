@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/public/Navbar";
 import { Footer } from "@/components/public/Footer";
 import { useState } from "react";
+import { personalInfo } from "@/lib/data/portfolio-data";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -90,15 +91,22 @@ export default function ContactPage() {
               <ContactInfoItem
                 icon="mail"
                 label="Email"
-                value="almolikimaged@gmail.com"
-                href="mailto:almolikimaged@gmail.com"
+                value={personalInfo.email}
+                href={`mailto:${personalInfo.email}`}
                 isPrimary
+              />
+              <div className="w-full h-px bg-on-surface"></div>
+              <ContactInfoItem
+                icon="call"
+                label="Phone"
+                value={personalInfo.phone}
+                href={`tel:${personalInfo.phone.replace(/\s+/g, "")}`}
               />
               <div className="w-full h-px bg-on-surface"></div>
               <ContactInfoItem
                 icon="location_on"
                 label="Location"
-                value="Riyadh, Saudi Arabia"
+                value={personalInfo.location}
               />
               <div className="w-full h-px bg-on-surface"></div>
               <ContactInfoItem

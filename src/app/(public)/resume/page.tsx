@@ -19,9 +19,19 @@ export default function ResumePage() {
         
         {/* Header */}
         <section className="py-12 border-b-4 border-on-surface">
-          <h1 className="font-display-2xl text-display-lg-mobile md:text-display-lg uppercase leading-none mb-4">
-            Curriculum <br className="hidden md:block"/> Vitae
-          </h1>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-4">
+            <h1 className="font-display-2xl text-display-lg-mobile md:text-display-lg uppercase leading-none">
+              Curriculum <br className="hidden md:block"/> Vitae
+            </h1>
+            <a 
+              href="/resume.pdf" 
+              download 
+              className="brutalist-button px-8 py-4 bg-[#030202] text-[#FFFFFF] font-label-mono text-label-mono uppercase tracking-widest flex items-center gap-3 hover:bg-primary transition-all border-2 border-on-surface"
+            >
+              <span className="material-symbols-outlined">download</span>
+              Download PDF
+            </a>
+          </div>
           <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-end mt-12">
             <div>
               <h2 className="font-headline-md text-primary uppercase">{personalInfo.name}</h2>

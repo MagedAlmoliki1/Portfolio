@@ -54,8 +54,30 @@ export class MongoProjectRepository
       const doc = await ProjectModel.findOne({ slug, status: 'published' }).lean()
       return doc ? this.toEntity(doc as IProjectDocument) : null
     } catch (error) {
-      console.error('Error in findBySlug:', error)
-      return null
+      console.error('Error in findBySlug, falling back to static data:', error)
+      try {
+        const { projects: staticProjects } = require('@/lib/data/portfolio-data')
+        const p = staticProjects.find((proj: any) => proj.slug === slug && proj.status === 'published')
+        if (!p) return null
+        
+        return ProjectEntity.fromJSON({
+          id: '000000000000000000000001',
+          title: p.title,
+          slug: p.slug,
+          description: p.description,
+          techStack: p.techStack,
+          status: p.status,
+          featured: p.featured,
+          category: p.category,
+          liveUrl: null,
+          githubUrl: null,
+          order: p.order,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        })
+      } catch (fallbackError) {
+        return null
+      }
     }
   }
 
@@ -77,8 +99,39 @@ export class MongoProjectRepository
         .lean()
       return (docs as IProjectDocument[]).map(d => this.toEntity(d))
     } catch (error) {
-      console.error('Error in findPublished:', error)
-      return []
+      console.error('Error in findPublished, falling back to static data:', error)
+      
+      // Fallback to static data from portfolio-data.ts
+      try {
+        const { projects: staticProjects } = require('@/lib/data/portfolio-data')
+        return staticProjects
+          .filter((p: any) => p.status === 'published')
+          .filter((p: any) => !options?.category || p.category === options.category)
+          .filter((p: any) => options?.featured === undefined || p.featured === options.featured)
+          .map((p: any, idx: number) => {
+            // Generate a valid 24-character hex ID for fallback
+            const hexId = (idx + 1).toString(16).padStart(24, '0')
+            
+            return ProjectEntity.fromJSON({
+              id: hexId,
+              title: p.title,
+              slug: p.slug,
+              description: p.description,
+              techStack: p.techStack,
+              status: p.status,
+              featured: p.featured,
+              category: p.category,
+              liveUrl: null,
+              githubUrl: null,
+              order: p.order,
+              createdAt: new Date(),
+              updatedAt: new Date()
+            })
+          })
+      } catch (fallbackError) {
+        console.error('Fallback failed:', fallbackError)
+        return []
+      }
     }
   }
 

@@ -8,7 +8,7 @@ export const personalInfo = {
   name: "Maged Almoliky",
   title: "Software Engineer",
   email: "almolikimaged@gmail.com",
-  phone: "0574849199",
+  phone: "+966 57 484 9199",
   location: "Riyadh, Saudi Arabia",
   visa: "Transferable Iqama",
   availability: "Available Immediately",
